@@ -2,10 +2,10 @@ const knex = require('knex')
 const db = knex({
   client: 'sqlite3',
   connection: {
-    filename: './data/cars.db3'
+    filename: '../data/dealer.db3'
   },
-  useNullAsDefault: true
-});
+  useNullAsDefault: 1
+}); //the above ^ is NOT an int; it is a bool value !
 
 function getAll() {
   return db('cars');
