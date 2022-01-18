@@ -17,6 +17,7 @@ Build a RESTful API for an "cars" resource. The client for this API is a car dea
 #### Cars Schema
 
 The critical information for each car is the vin, make, model, and mileage. They also track transmission type (manual, automatic...) and status of the title (clean, salvage...), but this information is not always immediately known. Write the "up" and "down" functions inside the `data/migrations/01-make_cars_table.js` migration file to satisfy the following schema:
+- [X] Done !
 
 | field        | data type        | metadata                                            |
 | ------------ | ---------------- | --------------------------------------------------- |
@@ -32,9 +33,9 @@ The critical information for each car is the vin, make, model, and mileage. They
 
 - Write the following db access functions inside `api/cars/cars-model.js` using Knex:
 
-  - `getAll` resolves to an array of car records (or an empty array)
-  - `getById` resolves to a car record by the given id
-  - `create` resolves to the newly created car record
+  - `getAll` resolves to an array of car records (or an empty array) X
+  - `getById` resolves to a car record by the given id X
+  - `create` resolves to the newly created car record X
 
 #### Write Middleware
 
