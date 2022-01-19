@@ -43,11 +43,11 @@ The critical information for each car is the vin, make, model, and mileage. They
 
   - `checkCarId` returns a status 404 with a `{ message: "car with id <car id> is not found" }` if the id in `req.params` does not exist in the database. X
 
-  - `checkCarPayload` returns a status 400 with a `{ message: "<field name> is missing" }` if any required field is missing. --?
+  - `checkCarPayload` returns a status 400 with a `{ message: "<field name> is missing" }` if any required field is missing. X
 
-  - `checkVinNumberValid` returns a status 400 with a `{ message: "vin <vin number> is invalid" }` if the vin number is [invalid](https://www.npmjs.com/package/vin-validator).
+  - `checkVinNumberValid` returns a status 400 with a `{ message: "vin <vin number> is invalid" }` if the vin number is [invalid](https://www.npmjs.com/package/vin-validator). X
 
-  - `checkVinNumberUnique` returns a status 400 with a `{ message: "vin <vin number> already exists" }` if the vin number already exists in the database.
+  - `checkVinNumberUnique` returns a status 400 with a `{ message: "vin <vin number> already exists" }` if the vin number already exists in the database. 
 
 ### Write a Cars API
 
