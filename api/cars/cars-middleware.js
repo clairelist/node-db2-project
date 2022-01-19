@@ -16,15 +16,28 @@ const checkCarId = async (req, res, next) => {
   }
 };
 
-const checkCarPayload = (req, res, next) => {
+const checkCarPayload = (req, res, next) => { //required fields::: body.vin, make, model, mileage
+    //status 400 with a `{ message: "<field name> is missing" }
+  // DO YOUR MAGIC
+  const nonVal = (valMsg) =>{ return res.status(400).json({message: valMsg}); }
+  if (!req.body.vin){
+    nonVal('vin is missing');
+  } else if (!req.body.make){
+    nonVal('make is missing');
+  } else if (!req.body.model){
+      nonVal('model is missing');
+  } else if (!req.body.mileage) {
+      nonVal('mileage is missing');
+  } else {
+      next();
+  }
+};
+
+const checkVinNumberValid = (req, res, next) => { //have to install that library, one moment
   // DO YOUR MAGIC
 }
 
-const checkVinNumberValid = (req, res, next) => {
-  // DO YOUR MAGIC
-}
-
-const checkVinNumberUnique = (req, res, next) => {
+const checkVinNumberUnique = (req, res, next) => { //will? have to be async
   // DO YOUR MAGIC
 }
 
